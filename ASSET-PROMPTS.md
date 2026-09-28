@@ -1,5 +1,7 @@
 # イラストの制作記録
 
+提供写真を参考にした白い柴犬5ポーズと共有画像は [ASSET-CREAM-PROMPTS.md](ASSET-CREAM-PROMPTS.md) に記録しています。現在のサイトで使用する犬は白〜クリーム色・赤い首輪です。以下のオレンジ色の犬と旧共有画像の項目は過去の制作記録です。
+
 現在の植物装飾5種類は [ASSET-BOTANICAL-PROMPTS.md](ASSET-BOTANICAL-PROMPTS.md) に記録しています。同じ木を繰り返す旧配置を改め、枝葉・野の花・舞う葉・小径・花枝を各セクションに描き分けました。
 
 木々2種類と動物の追加10ポーズについては [ASSET-GARDEN-PROMPTS.md](ASSET-GARDEN-PROMPTS.md) に保存先と実行プロンプトを記録しています。

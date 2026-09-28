@@ -6,11 +6,11 @@
 
 ## 納品時点の状態
 
-サイト本体と画像、OGP、faviconを作成済みです。お問い合わせ先は後日設定する方針のため準備中の案内を表示しています。参考写真と掲載誌データは未提供のため、実際の誌面ギャラリーはデータを追加した際に表示されます。
+サイト本体と画像、OGP、faviconを作成済みです。お問い合わせ先は後日設定する方針のため準備中の案内を表示しています。柴犬の写真2点を参考に、白〜クリーム色の犬を制作しました。掲載誌データは未提供のため、実際の誌面ギャラリーはデータを追加した際に表示されます。
 
-公開URLは https://michiocorporation.github.io/aoineko/ です。共有画像は https://michiocorporation.github.io/aoineko/og-inko-20260928.png です。ローカルの変更を公開サイトへ反映するには、GitHubへのコミット・pushとGitHub Pagesのデプロイ完了が必要です。
+公開URLは https://michiocorporation.github.io/aoineko/ です。共有画像は https://michiocorporation.github.io/aoineko/og-inko-cream-20260928.png です。ローカルの変更を公開サイトへ反映するには、GitHubへのコミット・pushとGitHub Pagesのデプロイ完了が必要です。
 
-任意のWebサーバーを使用する場合は、`index.html`、`styles.css`、`script.js`、`site-config.js`、`assets/`、`og-inko-20260928.png`、`favicon.svg`、`robots.txt`、`sitemap.xml` をアップロードしてください。`.git/` や作業用ファイルは公開する必要はありません。
+任意のWebサーバーを使用する場合は、`index.html`、`styles.css`、`script.js`、`site-config.js`、`assets/`、`og-inko-cream-20260928.png`、`favicon.svg`、`robots.txt`、`sitemap.xml` をアップロードしてください。`.git/` や作業用ファイルは公開する必要はありません。
 
 ## プレビュー
 
@@ -32,7 +32,7 @@ node serve.mjs
 
 ## 掲載誌ギャラリーと縦書き俳句
 
-参考資料、掲載誌写真、俳句の原文は未提供のため、実物の誌面や作品は掲載していません。掲載許諾を確認した画像を `assets/` に追加し、`site-config.js` の `publications` に次の形式で設定すると、作品欄にギャラリーが表示されます。
+掲載誌写真と俳句の原文は未提供のため、実物の誌面や作品は掲載していません。掲載許諾を確認した画像を `assets/` に追加し、`site-config.js` の `publications` に次の形式で設定すると、作品欄にギャラリーが表示されます。
 
 ```js
 publications: [
@@ -55,11 +55,11 @@ publications: [
 
 公開名は「蒼井 音呼」「AOI INKO」。本文・メタ情報では「蒼井音呼」を使用します。人物の実績・経歴は依頼文に基づき、未提供の俳句、写真、学校名、経歴年などは補っていません。
 
-独自ドメインに移す際は、`index.html` の canonical / og:url / og:image / twitter:image / JSON-LD、`sitemap.xml` と `robots.txt` のURLを本番ドメインに揃えてください。OGP・LINE・SNS用カードは `og-inko-20260928.png`（1200 × 630px）です。
+独自ドメインに移す際は、`index.html` の canonical / og:url / og:image / twitter:image / JSON-LD、`sitemap.xml` と `robots.txt` のURLを本番ドメインに揃えてください。OGP・LINE・SNS用カードは `og-inko-cream-20260928.png`（1200 × 630px）です。
 
 ## LINEで共有した際の画像
 
-LINEのURLプレビューは、HTMLの `og:title`・`og:description`・`og:image` を参照します。`index.html` の `<head>` に設定済みで、JavaScriptを実行せず取得できます。画像は `og-inko-20260928.png`（1200 × 630px、PNG）です。
+LINEのURLプレビューは、HTMLの `og:title`・`og:description`・`og:image` を参照します。`index.html` の `<head>` に設定済みで、JavaScriptを実行せず取得できます。画像は `og-inko-cream-20260928.png`（1200 × 630px、PNG）です。
 
 公開URLを変更する場合、画像を指す `og:image` と `twitter:image` も、認証なしで取得できる実際の画像のHTTPS URLに更新してください。ローカルのプレビューURLは共有用に使用しません。
 
@@ -80,6 +80,18 @@ LINEのURLプレビューは、HTMLの `og:title`・`og:description`・`og:image
 - OSの「視差効果を減らす」設定では演出を省略。
 - 固定ヘッダー、アンカー移動、スマートフォンメニュー、キーボード操作に対応。
 - JavaScriptが無効でも本文とページ内リンクを利用できます。
+
+## スクロールで巡る景色と白い柴犬
+
+提供写真の白〜クリーム色の毛並み、赤い首輪、黒い鼻、やさしい表情を参考に、犬の5ポーズを描き直しました。ロゴ・オープニング・フッターも同じ犬に統一。faviconの犬も白に変更しました。新しい共有カードは `og-inko-cream-20260928.png` です。素材と実行プロンプトは `ASSET-CREAM-PROMPTS.md` に記録しています。提供写真そのものはWebサイトに掲載していません。
+
+参考にしたのは https://yusannouekiya.com/ の余白を通る鳥と植物、https://sustainable.botanistofficial.com/ の重なり合う景色と背景の変化です。画像やソースコードは転用していません。
+
+FVはスクロールすると画面中央へカメラが進むように拡大します。一度真白になった後、背景が徐々に基準の若葉色（`rgb(218,239,199)`）へ変わり、その色に達してからプロフィールの文字が現れます。緑への変化が終わる前に次の文章が出ないよう、表示順を制御しています。プロフィールと経歴は若葉色を保ち、その後は淡い青・暖かな黄色へ。背景の光、遠景、手前の景色、植物は異なる速さで移動。経歴は緩やかな道、街歩きは丸い景色の窓、末尾は柔らかな光の中に配置しています。
+
+インコの飛行はスクロール位置に到達すると自動で始まり、スクロールを止めても続きます。1回目はPROFILEとCAREERの境界で左上から右下へ（約2.2秒）。2回目はCAREERとWORKSの境界で、別の滑空姿の画像を使い右上から左下へ（約2.4秒）。読書中の妨げを減らすため、以前の約半分の時間で通り過ぎます。どちらも飛び始めはゆっくり、後半ほど速くなるイージング（`cubic-bezier(.42, 0, 1, 1)`）を使用。それぞれページ表示中に一度だけで、逆スクロールで再生しません。画像は操作を妨げません。新しい素材の制作記録は `ASSET-FLIGHT-PROMPTS.md` です。
+
+主要な見出しと本文は画面に入ると一文字ずつ表示し、長い段落でも約2.3秒以内に全文が現れます。読み上げ用には分割しない文章を保持し、日本語の折り返しと本文の高さは変えません。右下の「演出を止める」でFV・背景の視差・鳥・文字・植物の動きを省略でき、同じタブ内では選択を保存します。OSのモーション抑制時は静止表示に切り替わります。独自のスクロール制御や追加ライブラリは使用していません。
 
 ## 草花のあしらいと動物のバリエーション
 
@@ -106,6 +118,6 @@ LINEのURLプレビューは、HTMLの `og:title`・`og:description`・`og:image
 - `script.js`：メニュー、登場演出、連絡先・ギャラリー設定
 - `site-config.js`：あとから追加する連絡先と掲載作品
 - `assets/`：水彩イラスト（built-in imagegenで生成）
-- `og-inko-20260928.png`：OGP / LINE / SNSカード
+- `og-inko-cream-20260928.png`：OGP / LINE / SNSカード
 - `favicon.svg`：32pxでも識別しやすいインコと犬
 - `ASSET-PROMPTS.md`：イラストの生成プロンプト

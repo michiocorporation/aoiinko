@@ -23,6 +23,51 @@ addEventListener('scroll', updateHeader, {passive:true});
 updateHeader();
 
 const motionPreference = matchMedia('(prefers-reduced-motion: reduce)');
+const flowButtons = [...document.querySelectorAll('.flow-button')];
+const detailContainer = document.querySelector('.career-details');
+const mobileFlow = matchMedia('(max-width: 760px)');
+function setCareerDetail(button, expanded) {
+  const panel = document.getElementById(button.getAttribute('aria-controls'));
+  button.setAttribute('aria-expanded', String(expanded));
+  panel.hidden = !expanded;
+  const action = button.querySelector('.flow-action');
+  action.replaceChildren(document.createTextNode(expanded ? '閉じる ' : '詳しく見る '));
+  const mark = document.createElement('span');
+  mark.setAttribute('aria-hidden', 'true');
+  mark.textContent = expanded ? '−' : '＋';
+  action.append(mark);
+}
+for (const button of flowButtons) {
+  const panel = document.getElementById(button.getAttribute('aria-controls'));
+  setCareerDetail(button, false);
+  const closeButton = document.createElement('button');
+  closeButton.type = 'button';
+  closeButton.className = 'career-detail-close';
+  closeButton.textContent = '閉じる −';
+  closeButton.setAttribute('aria-label', button.querySelector('.flow-title').textContent + 'の説明を閉じる');
+  closeButton.addEventListener('click', () => {
+    setCareerDetail(button, false);
+    button.focus({preventScroll: true});
+    button.scrollIntoView({behavior: 'auto', block: 'nearest'});
+  });
+  panel.append(closeButton);
+  button.addEventListener('click', () => {
+    const expanded = button.getAttribute('aria-expanded') !== 'true';
+    flowButtons.forEach(item => setCareerDetail(item, item === button && expanded));
+    if (expanded && !mobileFlow.matches) {
+      panel.scrollIntoView({behavior: motionPreference.matches ? 'auto' : 'smooth', block: 'nearest'});
+    }
+  });
+}
+function arrangeCareerDetails() {
+  // Keep mobile explanations directly beside the illustrated step that opens them.
+  for (const button of flowButtons) {
+    const panel = document.getElementById(button.getAttribute('aria-controls'));
+    (mobileFlow.matches ? button.parentElement : detailContainer).append(panel);
+  }
+}
+arrangeCareerDetails();
+mobileFlow.addEventListener('change', arrangeCareerDetails);
 const opening = document.querySelector('.opening');
 if (!motionPreference.matches && !location.hash) {
   opening.classList.add('is-playing');
@@ -61,7 +106,7 @@ if ('IntersectionObserver' in window) {
   document.querySelectorAll('main > section').forEach(section => sectionObserver.observe(section));
 }
 
-const config = window.AOI_NEKO_CONFIG || {};
+const config = window.AOI_INKO_CONFIG || {};
 const contactButton = document.querySelector('#contact-button');
 const contactStatus = document.querySelector('#contact-status');
 const contactDialog = document.querySelector('#contact-dialog');

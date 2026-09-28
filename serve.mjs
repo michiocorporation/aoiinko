@@ -4,7 +4,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = fileURLToPath(new URL('./', import.meta.url));
-const publicFiles = new Set(['index.html', 'styles.css', 'script.js', 'site-config.js', 'favicon.svg', 'og.png', 'robots.txt', 'sitemap.xml']);
+const publicFiles = new Set(['index.html', 'styles.css', 'script.js', 'site-config.js', 'favicon.svg', 'og.png', 'og-inko-20260928.png', 'robots.txt', 'sitemap.xml']);
 const types = {'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.svg':'image/svg+xml','.png':'image/png','.webp':'image/webp','.jpg':'image/jpeg','.jpeg':'image/jpeg','.xml':'application/xml; charset=utf-8','.txt':'text/plain; charset=utf-8'};
 
 const server = http.createServer((req, res) => {

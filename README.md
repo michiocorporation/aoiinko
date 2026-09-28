@@ -1,6 +1,6 @@
 # 蒼井音呼 公式プロフィールサイト
 
-生成り、水彩、余白を基調とした、1ページ完結の静的Webサイトです。正式な編集先はこのGitリポジトリ `aoineko/` です。`index.html` と公開ファイルをリポジトリ直下に配置しています。依存パッケージのインストールやビルドは不要です。
+生成り、水彩、明るい青・若葉色・黄色を基調とした、1ページ完結の静的Webサイトです。正式な編集先はこのGitリポジトリ `aoineko/` です。`index.html` と公開ファイルをリポジトリ直下に配置しています。依存パッケージのインストールやビルドは不要です。
 
 今後の更新はこのフォルダー内で行います。隣接する `aoi-neko/`、`aoi-neko-site/`、ZIPファイルは旧版として扱います。
 
@@ -8,9 +8,9 @@
 
 サイト本体と画像、OGP、faviconを作成済みです。お問い合わせ先は後日設定する方針のため準備中の案内を表示しています。参考写真と掲載誌データは未提供のため、実際の誌面ギャラリーはデータを追加した際に表示されます。
 
-公開URLは https://michiocorporation.github.io/aoineko/ です。共有画像は https://michiocorporation.github.io/aoineko/og.png です。ローカルの変更を公開サイトへ反映するには、GitHubへのコミット・pushとGitHub Pagesのデプロイ完了が必要です。
+公開URLは https://michiocorporation.github.io/aoineko/ です。共有画像は https://michiocorporation.github.io/aoineko/og-inko-20260928.png です。ローカルの変更を公開サイトへ反映するには、GitHubへのコミット・pushとGitHub Pagesのデプロイ完了が必要です。
 
-任意のWebサーバーを使用する場合は、`index.html`、`styles.css`、`script.js`、`site-config.js`、`assets/`、`og.png`、`favicon.svg`、`robots.txt`、`sitemap.xml` をアップロードしてください。`.git/` や作業用ファイルは公開する必要はありません。
+任意のWebサーバーを使用する場合は、`index.html`、`styles.css`、`script.js`、`site-config.js`、`assets/`、`og-inko-20260928.png`、`favicon.svg`、`robots.txt`、`sitemap.xml` をアップロードしてください。`.git/` や作業用ファイルは公開する必要はありません。
 
 ## プレビュー
 
@@ -53,19 +53,25 @@ publications: [
 
 ## 表記とSEO
 
-公開名は「蒼井 音呼」「AOI NEKO」。本文・メタ情報では「蒼井音呼」を使用します。人物の実績・経歴は依頼文に基づき、未提供の俳句、写真、学校名、経歴年などは補っていません。
+公開名は「蒼井 音呼」「AOI INKO」。本文・メタ情報では「蒼井音呼」を使用します。人物の実績・経歴は依頼文に基づき、未提供の俳句、写真、学校名、経歴年などは補っていません。
 
-独自ドメインに移す際は、`index.html` の canonical / og:url / og:image / twitter:image / JSON-LD、`sitemap.xml` と `robots.txt` のURLを本番ドメインに揃えてください。OGP・LINE・SNS用カードは `og.png`（1200 × 630px）です。
+独自ドメインに移す際は、`index.html` の canonical / og:url / og:image / twitter:image / JSON-LD、`sitemap.xml` と `robots.txt` のURLを本番ドメインに揃えてください。OGP・LINE・SNS用カードは `og-inko-20260928.png`（1200 × 630px）です。
 
 ## LINEで共有した際の画像
 
-LINEのURLプレビューは、HTMLの `og:title`・`og:description`・`og:image` を参照します。`index.html` の `<head>` に設定済みで、JavaScriptを実行せず取得できます。画像は `og.png`（1200 × 630px、PNG）です。
+LINEのURLプレビューは、HTMLの `og:title`・`og:description`・`og:image` を参照します。`index.html` の `<head>` に設定済みで、JavaScriptを実行せず取得できます。画像は `og-inko-20260928.png`（1200 × 630px、PNG）です。
 
 公開URLを変更する場合、画像を指す `og:image` と `twitter:image` も、認証なしで取得できる実際の画像のHTTPS URLに更新してください。ローカルのプレビューURLは共有用に使用しません。
 
 設定変更をGitHubへ反映し、GitHub Pagesのデプロイが完了した後に、公開URLをLINEに貼り直して確認します。LINEアプリ内での表示確認は別途必要です。
 
 参考: https://developers.line.biz/ja/faq/tags/line-official-account/
+
+## 2026年9月28日の改訂
+
+本文は改訂原稿に短縮。英字名は AOI INKO。インコと赤い首輪の柴犬を明るい表情のイラストに差し替えました。経歴は5項目のイラストフローで、詳しい説明は項目を押すと開きます。スマートフォンでは説明が各項目の直下に表示されます。設定のグローバル名は `AOI_INKO_CONFIG` です。
+
+旧共有URL用の `og.png` にも新しい共有画像を保存しています。
 
 ## 動き・操作
 
@@ -82,6 +88,6 @@ LINEのURLプレビューは、HTMLの `og:title`・`og:description`・`og:image
 - `script.js`：メニュー、登場演出、連絡先・ギャラリー設定
 - `site-config.js`：あとから追加する連絡先と掲載作品
 - `assets/`：水彩イラスト（built-in imagegenで生成）
-- `og.png`：OGP / LINE / SNSカード
+- `og-inko-20260928.png`：OGP / LINE / SNSカード
 - `favicon.svg`：32pxでも識別しやすいインコと犬
 - `ASSET-PROMPTS.md`：イラストの生成プロンプト

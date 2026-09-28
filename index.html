@@ -29,9 +29,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+JP:wght@400;500;600&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="preload" href="./assets/parakeet-pop.webp" as="image">
-  <link rel="preload" href="./assets/shiba-pop.webp" as="image">
-  <link rel="stylesheet" href="./styles.css?v=20260928">
+  <link rel="preload" href="./assets/poses/parakeet-wings.webp" as="image">
+  <link rel="preload" href="./assets/poses/shiba-playbow.webp" as="image">
+  <link rel="stylesheet" href="./styles.css?v=20260928-botanical">
 </head>
 <body>
   <div class="opening" aria-hidden="true">
@@ -49,18 +49,21 @@
   </header>
   <main id="main">
     <section id="hero" class="hero" aria-labelledby="hero-title">
+      <span class="ornament-slot ornament-canopy" aria-hidden="true"><span class="botanical-art reveal reveal-right"><img class="botanical-paint" src="./assets/botanicals/canopy.webp" alt="" width="900" height="600" decoding="async"></span></span>
       <div class="container hero-layout">
         <div class="hero-copy"><p class="eyebrow">俳句・随筆</p><h1 id="hero-title">蒼井 音呼</h1><p class="roman-name" lang="en">AOI INKO</p><p class="hero-catch">取材し、<br>考え、<span>言葉にする。</span></p><div class="hero-actions"><a class="button button-primary" href="#profile">Profileを見る <span aria-hidden="true">↗</span></a><a class="text-link" href="#career">歩みを見る <span aria-hidden="true">→</span></a></div></div>
-        <div class="hero-art" aria-hidden="true"><span class="hero-sun"></span><span class="hero-orbit"></span><img class="hero-bird" src="./assets/parakeet-pop.webp" alt="" width="800" height="800" fetchpriority="high"><img class="hero-dog" src="./assets/shiba-pop.webp" alt="" width="800" height="800" fetchpriority="high"><span class="art-speck speck-one"></span><span class="art-speck speck-two"></span><span class="art-speck speck-three"></span></div>
+        <div class="hero-art" aria-hidden="true"><span class="hero-sun"></span><span class="hero-orbit"></span><img class="hero-bird" src="./assets/poses/parakeet-wings.webp" alt="" width="800" height="800" fetchpriority="high"><img class="hero-dog" src="./assets/poses/shiba-playbow.webp" alt="" width="800" height="800" fetchpriority="high"><span class="art-speck speck-one"></span><span class="art-speck speck-two"></span><span class="art-speck speck-three"></span></div>
       </div>
       <div class="container hero-bottom"><a class="scroll-cue" href="#profile"><span lang="en">SCROLL TO READ</span><span aria-hidden="true">↓</span></a><span class="hero-category" lang="en">WORDS, SEASONS &amp; EVERYDAY LIFE</span></div>
     </section>
     <section id="profile" class="profile section-space" aria-labelledby="profile-title">
-      <div class="container section-grid"><div class="section-aside"><div class="section-heading"><p class="section-label" lang="en">PROFILE</p><h2 id="profile-title">ことばと<br>歩いてきた時間</h2><span class="heading-rule" aria-hidden="true"></span></div><img class="profile-bird reveal reveal-left" src="./assets/parakeet-pop.webp" alt="" width="800" height="800" loading="lazy"></div>
+      <span class="ornament-slot ornament-wildflowers" aria-hidden="true"><span class="botanical-art reveal reveal-left"><img class="botanical-paint" src="./assets/botanicals/wildflowers.webp" alt="" width="600" height="900" loading="lazy" decoding="async"></span></span>
+      <div class="container section-grid"><div class="section-aside"><div class="section-heading"><p class="section-label" lang="en">PROFILE</p><h2 id="profile-title">ことばと<br>歩いてきた時間</h2><span class="heading-rule" aria-hidden="true"></span></div><div class="profile-companions" aria-hidden="true"><img class="profile-bird reveal reveal-left" src="./assets/poses/parakeet-sky.webp" alt="" width="720" height="720" loading="lazy"><img class="profile-dog reveal reveal-right" src="./assets/poses/shiba-sitting.webp" alt="" width="720" height="720" loading="lazy"></div></div>
         <div class="prose"><p>約30年にわたり、取材した情報を整理し、文章として形にする新聞づくりなどに携わってきました。</p><p class="profile-questions">何を見つけるのか。<br>何を残すのか。<br>そして、どのような言葉なら人に届くのか。</p><p>そうした問いと向き合いながら培ってきた観察する力、構成する力、言葉を選ぶ力は、現在の俳句づくりにもつながっています。</p><p>教育や映像制作など、さまざまな形で表現に関わってきました。</p></div>
       </div>
     </section>
     <section id="career" class="career section-space" aria-labelledby="career-title">
+      <span class="ornament-slot ornament-leaf-drift" aria-hidden="true"><span class="botanical-art reveal reveal-right"><img class="botanical-paint" src="./assets/botanicals/leaf-drift.webp" alt="" width="900" height="600" loading="lazy" decoding="async"></span></span>
       <div class="container"><div class="section-heading heading-center"><p class="section-label" lang="en">CAREER</p><h2 id="career-title">すべての経験が、<br>いまの一句に<span class="mobile-title-line">つながっている。</span></h2><span class="heading-rule" aria-hidden="true"></span></div><p class="career-intro">ことばを伝えること。<br>人に何かを教えること。<br>音や映像を使って表現すること。</p>
         <ol class="career-flow" aria-label="学生時代から俳句へ、表現の歩み">
           <li><button class="flow-button" type="button" aria-controls="career-student" aria-expanded="true"><span class="flow-art art-student reveal reveal-left" aria-hidden="true"></span><span class="flow-title">学生時代</span><span class="flow-caption">表現に出会う</span><span class="flow-action">詳しく見る <span aria-hidden="true">＋</span></span></button></li>
@@ -69,6 +72,7 @@
           <li><button class="flow-button" type="button" aria-controls="career-video" aria-expanded="true"><span class="flow-art art-video" aria-hidden="true"></span><span class="flow-title">映像制作</span><span class="flow-caption">音と映像で表す</span><span class="flow-action">詳しく見る <span aria-hidden="true">＋</span></span></button></li>
           <li><button class="flow-button" type="button" aria-controls="career-haiku" aria-expanded="true"><span class="flow-art art-haiku reveal reveal-right" aria-hidden="true"></span><span class="flow-title">俳句</span><span class="flow-caption">いまの一句へ</span><span class="flow-action">詳しく見る <span aria-hidden="true">＋</span></span></button></li>
         </ol>
+        <div class="career-companions" aria-hidden="true"><img class="career-bird reveal reveal-left" src="./assets/poses/parakeet-flying.webp" alt="" width="720" height="720" loading="lazy"><span class="companion-trail"></span><img class="career-dog reveal reveal-right" src="./assets/poses/shiba-running.webp" alt="" width="720" height="720" loading="lazy"></div>
         <div class="career-details">
           <article class="career-detail" id="career-student" aria-labelledby="career-student-title"><h3 id="career-student-title">学生時代</h3><div class="prose"><p>学生時代には、硬式テニスやESSの活動に参加。ESSでは、仲間とともに英語劇の創作・上演にも取り組みました。</p><p>また、幼い頃から箏に親しみ、高校時代には新体操やダンス創作なども経験。さまざまな表現に触れてきました。</p></div></article>
           <article class="career-detail" id="career-writing" aria-labelledby="career-writing-title"><h3 id="career-writing-title">新聞・文章制作</h3><div class="prose"><p>約30年にわたり、新聞づくりをはじめとする文章制作に携わる。</p><p>取材するテーマを考え、人の話を聞き、情報を整理し、読者へ届く形へと構成する。</p></div></article>
@@ -79,9 +83,11 @@
       </div>
     </section>
     <section id="works" class="works section-space" aria-labelledby="works-title">
-      <div class="container section-grid"><div class="section-aside"><div class="section-heading"><p class="section-label" lang="en">HAIKU &amp; WORKS</p><h2 id="works-title">街歩き</h2><span class="heading-rule" aria-hidden="true"></span></div><img class="works-dog reveal reveal-left" src="./assets/shiba-pop.webp" alt="" width="800" height="800" loading="lazy"></div><div class="prose"><p class="works-lead"><span>季節の空気。</span><span>街の気配。</span><span>人の仕草。</span><br>日々の暮らしのなかに現れる<br>小さな違和感や可笑しみ。</p><p>吟行をきっかけに、街を歩き、その土地に残る歴史や物語を訪ねるようになりました。</p><p>普段なら通り過ぎてしまう場所でも、少し立ち止まってみれば、そこには人の暮らしと時間の痕跡があります。</p><p>地図を開き、知らない道へ入り、土地の記憶を探す。</p><p>街歩きもまた、俳句につながる大切な時間です。</p></div></div><div class="container"><div id="publication-gallery" class="publication-gallery" aria-label="掲載誌と作品" hidden></div></div>
+      <span class="ornament-slot ornament-meadow" aria-hidden="true"><span class="botanical-art reveal reveal-left"><img class="botanical-paint" src="./assets/botanicals/meadow.webp" alt="" width="900" height="600" loading="lazy" decoding="async"></span></span>
+      <div class="container section-grid"><div class="section-aside"><div class="section-heading"><p class="section-label" lang="en">HAIKU &amp; WORKS</p><h2 id="works-title">街歩き</h2><span class="heading-rule" aria-hidden="true"></span></div><div class="works-companions" aria-hidden="true"><img class="works-dog reveal reveal-left" src="./assets/poses/shiba-walking.webp" alt="" width="720" height="720" loading="lazy"><img class="works-bird reveal reveal-right" src="./assets/poses/parakeet-preening.webp" alt="" width="720" height="720" loading="lazy"></div></div><div class="prose"><p class="works-lead"><span>季節の空気。</span><span>街の気配。</span><span>人の仕草。</span><br>日々の暮らしのなかに現れる<br>小さな違和感や可笑しみ。</p><p>吟行をきっかけに、街を歩き、その土地に残る歴史や物語を訪ねるようになりました。</p><p>普段なら通り過ぎてしまう場所でも、少し立ち止まってみれば、そこには人の暮らしと時間の痕跡があります。</p><p>地図を開き、知らない道へ入り、土地の記憶を探す。</p><p>街歩きもまた、俳句につながる大切な時間です。</p></div></div><div class="container"><div id="publication-gallery" class="publication-gallery" aria-label="掲載誌と作品" hidden></div></div>
     </section>
-    <section id="contact" class="contact section-space" aria-labelledby="contact-title"><div class="container contact-inner"><p class="section-label" lang="en">CONTACT</p><h2 id="contact-title"><span class="quote-line">今日見つけた<span class="quote-piece">小さな景色が、</span></span><span class="quote-line">いつか一句に<span class="quote-piece">なりますように。</span></span></h2><span class="heading-rule" aria-hidden="true"></span><a id="contact-button" class="button button-primary contact-button" href="#contact-status">お問い合わせ <span aria-hidden="true">↗</span></a><p id="contact-status" class="contact-status">お問い合わせ窓口は、ただいま準備中です。</p><div class="closing-companions" aria-hidden="true"><img class="closing-bird reveal reveal-left" src="./assets/parakeet-pop.webp" alt="" width="800" height="800" loading="lazy"><img class="closing-dog reveal reveal-right" src="./assets/shiba-pop.webp" alt="" width="800" height="800" loading="lazy"></div></div></section>
+    <section id="contact" class="contact section-space" aria-labelledby="contact-title">
+      <span class="ornament-slot ornament-flowering-sprig" aria-hidden="true"><span class="botanical-art reveal reveal-right"><img class="botanical-paint" src="./assets/botanicals/flowering-sprig.webp" alt="" width="600" height="900" loading="lazy" decoding="async"></span></span><div class="container contact-inner"><p class="section-label" lang="en">CONTACT</p><h2 id="contact-title"><span class="quote-line">今日見つけた<span class="quote-piece">小さな景色が、</span></span><span class="quote-line">いつか一句に<span class="quote-piece">なりますように。</span></span></h2><span class="heading-rule" aria-hidden="true"></span><a id="contact-button" class="button button-primary contact-button" href="#contact-status">お問い合わせ <span aria-hidden="true">↗</span></a><p id="contact-status" class="contact-status">お問い合わせ窓口は、ただいま準備中です。</p><div class="closing-companions" aria-hidden="true"><img class="closing-bird reveal reveal-left" src="./assets/poses/parakeet-singing.webp" alt="" width="800" height="800" loading="lazy"><img class="closing-dog reveal reveal-right" src="./assets/poses/shiba-resting.webp" alt="" width="800" height="800" loading="lazy"></div></div></section>
   </main>
   <footer class="site-footer"><div class="container footer-inner"><a class="brand" href="#hero" aria-label="蒼井音呼 ページの先頭へ"><span class="symbol" aria-hidden="true"><img class="symbol-bird" src="./assets/parakeet-pop.webp" alt="" width="800" height="800" loading="lazy"><img class="symbol-dog" src="./assets/shiba-pop.webp" alt="" width="800" height="800" loading="lazy"></span><span class="brand-type"><span>蒼井 音呼</span><span lang="en">AOI INKO</span></span></a><p class="copyright" lang="en">Copyright © AOI INKO<br>All Rights Reserved.</p><a class="back-top" href="#hero" aria-label="ページの先頭へ"><span aria-hidden="true">↑</span><span lang="en">PAGE TOP</span></a></div></footer>
   <dialog id="contact-dialog" aria-labelledby="contact-dialog-title" aria-describedby="contact-dialog-description"><div class="dialog-content"><p class="section-label" lang="en">CONTACT</p><h2 id="contact-dialog-title">お問い合わせについて</h2><p id="contact-dialog-description">お問い合わせ窓口は、ただいま準備中です。<br>ご案内まで、今しばらくお待ちください。</p><form method="dialog"><button class="button button-primary" autofocus>閉じる</button></form></div></dialog>
@@ -177,11 +183,13 @@ if ('IntersectionObserver' in window && !motionPreference.matches) {
   const artObserver = new IntersectionObserver(entries => {
     for (const entry of entries) {
       if (!entry.isIntersecting) continue;
-      entry.target.classList.add('is-visible');
+      // Observe the stationary frame so off-screen botanical artwork can slide into view.
+      const artwork = entry.target.classList.contains('ornament-slot') ? entry.target.querySelector('.botanical-art') : entry.target;
+      artwork.classList.add('is-visible');
       artObserver.unobserve(entry.target);
     }
   }, {threshold:.1, rootMargin:'0px 0px -25px 0px'});
-  document.querySelectorAll('.reveal').forEach(element => artObserver.observe(element));
+  document.querySelectorAll('.reveal:not(.botanical-art), .ornament-slot').forEach(element => artObserver.observe(element));
   motionPreference.addEventListener('change', event => {
     if (!event.matches) return;
     document.body.classList.remove('motion-ready');

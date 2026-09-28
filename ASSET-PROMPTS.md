@@ -1,5 +1,9 @@
 # イラストの制作記録
 
+現在の植物装飾5種類は [ASSET-BOTANICAL-PROMPTS.md](ASSET-BOTANICAL-PROMPTS.md) に記録しています。同じ木を繰り返す旧配置を改め、枝葉・野の花・舞う葉・小径・花枝を各セクションに描き分けました。
+
+木々2種類と動物の追加10ポーズについては [ASSET-GARDEN-PROMPTS.md](ASSET-GARDEN-PROMPTS.md) に保存先と実行プロンプトを記録しています。
+
 2026年9月28日改訂。生成方式: built-in image_gen。公開名の英字は AOI INKO。
 
 インコと赤い首輪の柴犬を、明るい青・若葉色・黄色で描き直しました。WebPは透明背景を維持した800 × 800px、経歴フローは2000 × 800px。共有カードは1200 × 630pxのPNGです。Sharpによるサイズ調整・形式変換を行っています。

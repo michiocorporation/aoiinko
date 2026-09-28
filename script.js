@@ -81,11 +81,13 @@ if ('IntersectionObserver' in window && !motionPreference.matches) {
   const artObserver = new IntersectionObserver(entries => {
     for (const entry of entries) {
       if (!entry.isIntersecting) continue;
-      entry.target.classList.add('is-visible');
+      // Observe the stationary frame so off-screen botanical artwork can slide into view.
+      const artwork = entry.target.classList.contains('ornament-slot') ? entry.target.querySelector('.botanical-art') : entry.target;
+      artwork.classList.add('is-visible');
       artObserver.unobserve(entry.target);
     }
   }, {threshold:.1, rootMargin:'0px 0px -25px 0px'});
-  document.querySelectorAll('.reveal').forEach(element => artObserver.observe(element));
+  document.querySelectorAll('.reveal:not(.botanical-art), .ornament-slot').forEach(element => artObserver.observe(element));
   motionPreference.addEventListener('change', event => {
     if (!event.matches) return;
     document.body.classList.remove('motion-ready');

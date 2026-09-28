@@ -308,3 +308,80 @@ body:not(.js-ready) .flow-button { cursor: default; }
   .reveal { opacity: 1 !important; transform: none !important; }
   body { font-size: 12pt; }
 }
+
+/* Each chapter has its own botanical motif. Observe a stationary frame. */
+main > section { position: relative; isolation: isolate; }
+main > section > .container { position: relative; z-index: 1; }
+.ornament-slot { position: absolute; pointer-events: none; z-index: 0; }
+.botanical-art { display: block; width: 100%; }
+.botanical-paint { width: 100%; height: auto; transform-origin: var(--sway-origin, 50% 95%); }
+.motion-ready .botanical-art.is-visible .botanical-paint { animation: botanical-sway 5.2s ease-in-out both; }
+.ornament-canopy { width: clamp(300px, 35vw, 520px); aspect-ratio: 3 / 2; top: -38px; right: -75px; --sway-origin: 95% 10%; }
+.ornament-wildflowers { width: 195px; aspect-ratio: 2 / 3; bottom: -10px; left: max(-45px, calc((100vw - 1200px) / 2 - 130px)); }
+.ornament-leaf-drift { width: clamp(190px, 22vw, 310px); aspect-ratio: 3 / 2; top: 65px; right: max(-45px, calc((100vw - 1200px) / 2 - 140px)); --sway-origin: 50% 50%; }
+.ornament-meadow { width: 365px; aspect-ratio: 3 / 2; bottom: 10px; left: max(-35px, calc((100vw - 1200px) / 2 - 30px)); }
+.ornament-flowering-sprig { width: 210px; aspect-ratio: 2 / 3; bottom: 45px; right: max(10px, calc((100vw - 1100px) / 2)); }
+@keyframes botanical-sway {
+  0% { transform: rotate(-2deg); }
+  25% { transform: rotate(1.7deg); }
+  50% { transform: rotate(-1.1deg); }
+  75% { transform: rotate(.5deg); }
+  100% { transform: rotate(0); }
+}
+/* Soft paper-like edges let the colored chapters breathe. */
+.profile::before, .works::before { height: 50px; width: 120%; left: -10%; top: -27px; border-radius: 0 0 50% 50%; background: var(--paper); }
+.profile::after, .works::after { content: ''; position: absolute; bottom: -29px; left: -10%; width: 120%; height: 45px; border-radius: 50% 50% 0 0; background: var(--paper); pointer-events: none; }
+@media (max-width: 1100px) {
+  .ornament-canopy { width: 330px; right: -90px; top: -20px; }
+  .ornament-wildflowers { width: 165px; left: -50px; }
+  .ornament-leaf-drift { width: 210px; right: -70px; top: 40px; }
+  .ornament-meadow { width: 300px; left: -30px; bottom: 12px; }
+  .ornament-flowering-sprig { width: 155px; right: -18px; }
+}
+@media (max-width: 760px) {
+  .ornament-canopy { width: 180px; right: -62px; top: auto; bottom: 245px; }
+  .ornament-wildflowers { width: 70px; left: auto; right: 8px; bottom: -25px; }
+  .ornament-leaf-drift { width: 120px; top: 24px; right: -30px; }
+  .ornament-meadow { width: 175px; bottom: 0; left: -12px; }
+  .ornament-flowering-sprig { width: 95px; bottom: 20px; right: -18px; }
+  .profile::before, .works::before { height: 32px; top: -18px; }
+  .profile::after, .works::after { height: 28px; bottom: -19px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .botanical-paint { animation: none !important; transform: none !important; }
+}
+@media print { .ornament-slot { display: none !important; } }
+
+.profile-companions { position: relative; width: 280px; height: 240px; margin-top: 38px; }
+.profile-companions .profile-bird { position: absolute; width: 146px; top: 0; left: -4px; margin: 0; }
+.profile-dog { position: absolute; width: 180px; bottom: 0; right: -4px; }
+.works-companions { position: relative; width: 285px; height: 285px; margin-top: 34px; }
+.works-companions .works-dog { position: absolute; width: 250px; bottom: 0; left: -4px; margin: 0; }
+.works-bird { position: absolute; width: 122px; top: -8px; right: -5px; }
+.career-companions { display: flex; align-items: center; justify-content: space-between; gap: 35px; width: min(700px, 100%); height: 120px; margin: 22px auto 0; }
+.career-bird { width: 130px; flex: 0 0 auto; }
+.career-dog { width: 165px; flex: 0 0 auto; }
+.companion-trail { flex: 1; border-top: 1px dashed #b4d392; transform: rotate(-4deg); }
+@media (max-width: 1100px) {
+  .profile-companions { width: 250px; height: 225px; }
+  .profile-dog { width: 163px; }
+  .works-companions { width: 250px; height: 260px; }
+  .works-companions .works-dog { width: 228px; }
+  .works-bird { width: 110px; }
+}
+@media (max-width: 760px) {
+  .profile-companions { position: absolute; width: 117px; height: 133px; right: -2px; bottom: -6px; margin: 0; }
+  .profile-companions .profile-bird { width: 78px; left: -4px; top: -5px; bottom: auto; }
+  .profile-dog { width: 84px; right: -5px; bottom: -12px; }
+  .works-companions { position: absolute; width: 120px; height: 121px; right: 0; bottom: -7px; margin: 0; }
+  .works-companions .works-dog { width: 106px; left: 12px; right: auto; bottom: -4px; }
+  .works-bird { width: 62px; left: -20px; right: auto; top: 24px; }
+  .career-companions { gap: 18px; height: 110px; margin-top: 34px; }
+  .career-bird { width: 98px; }
+  .career-dog { width: 132px; }
+}
+@media (max-width: 370px) {
+  .profile-companions { width: 90px; height: 114px; right: -6px; bottom: -3px; }
+  .profile-companions .profile-bird { width: 68px; left: -5px; }
+  .profile-dog { width: 70px; right: -3px; }
+}

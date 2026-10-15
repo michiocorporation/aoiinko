@@ -8,9 +8,13 @@
 
 サイト本体と画像、OGP、faviconを作成済みです。お問い合わせ先は後日設定する方針のため準備中の案内を表示しています。柴犬の写真2点を参考に、白〜クリーム色の犬を制作しました。掲載誌データは未提供のため、実際の誌面ギャラリーはデータを追加した際に表示されます。
 
-公開URLは https://michiocorporation.github.io/aoineko/ です。共有画像は https://michiocorporation.github.io/aoineko/og-inko-cream-20260928.png です。ローカルの変更を公開サイトへ反映するには、GitHubへのコミット・pushとGitHub Pagesのデプロイ完了が必要です。
+公開URLは https://michiocorporation.github.io/aoineko/ です。共有画像の設定先は https://michiocorporation.github.io/aoineko/og-inko-cream-20261015.png です。ローカルの変更を公開サイトへ反映するには、GitHubへのコミット・pushとGitHub Pagesのデプロイ完了が必要です。
 
-任意のWebサーバーを使用する場合は、`index.html`、`styles.css`、`script.js`、`site-config.js`、`assets/`、`og-inko-cream-20260928.png`、`favicon.svg`、`robots.txt`、`sitemap.xml` をアップロードしてください。`.git/` や作業用ファイルは公開する必要はありません。
+任意のWebサーバーを使用する場合は、`index.html`、`styles.css`、`script.js`、`site-config.js`、`assets/`、`og-inko-cream-20261015.png`、`og.png`、`favicon.svg`、`robots.txt`、`sitemap.xml` をアップロードしてください。`.git/` や作業用ファイルは公開する必要はありません。
+
+## 2026年10月15日の改訂
+
+白柴犬の5ポーズすべてで頭部の茶色を一段白くし、ロゴ・オープニング・共有カードにも反映しました。学生時代の挿絵は、仮面を舞台のカーテンとスポットライトに変更し、テニスの要素は残しています。CONTACTの犬とインコの下に「おしん＆パン」を追加しました。素材・使用プロンプトは `ASSET-REVISIONS-20261015.md` に記録しています。旧画像は保管しています。
 
 ## プレビュー
 
@@ -55,11 +59,11 @@ publications: [
 
 公開名は「蒼井 音呼」「AOI INKO」。本文・メタ情報では「蒼井音呼」を使用します。人物の実績・経歴は依頼文に基づき、未提供の俳句、写真、学校名、経歴年などは補っていません。
 
-独自ドメインに移す際は、`index.html` の canonical / og:url / og:image / twitter:image / JSON-LD、`sitemap.xml` と `robots.txt` のURLを本番ドメインに揃えてください。OGP・LINE・SNS用カードは `og-inko-cream-20260928.png`（1200 × 630px）です。
+独自ドメインに移す際は、`index.html` の canonical / og:url / og:image / twitter:image / JSON-LD、`sitemap.xml` と `robots.txt` のURLを本番ドメインに揃えてください。OGP・LINE・SNS用カードは `og-inko-cream-20261015.png`（1200 × 630px）です。
 
 ## LINEで共有した際の画像
 
-LINEのURLプレビューは、HTMLの `og:title`・`og:description`・`og:image` を参照します。`index.html` の `<head>` に設定済みで、JavaScriptを実行せず取得できます。画像は `og-inko-cream-20260928.png`（1200 × 630px、PNG）です。
+LINEのURLプレビューは、HTMLの `og:title`・`og:description`・`og:image` を参照します。`index.html` の `<head>` に設定済みで、JavaScriptを実行せず取得できます。画像は `og-inko-cream-20261015.png`（1200 × 630px、PNG）です。
 
 公開URLを変更する場合、画像を指す `og:image` と `twitter:image` も、認証なしで取得できる実際の画像のHTTPS URLに更新してください。ローカルのプレビューURLは共有用に使用しません。
 
@@ -83,7 +87,7 @@ LINEのURLプレビューは、HTMLの `og:title`・`og:description`・`og:image
 
 ## スクロールで巡る景色と白い柴犬
 
-提供写真の白〜クリーム色の毛並み、赤い首輪、黒い鼻、やさしい表情を参考に、犬の5ポーズを描き直しました。ロゴ・オープニング・フッターも同じ犬に統一。faviconの犬も白に変更しました。新しい共有カードは `og-inko-cream-20260928.png` です。素材と実行プロンプトは `ASSET-CREAM-PROMPTS.md` に記録しています。提供写真そのものはWebサイトに掲載していません。
+提供写真の白〜クリーム色の毛並み、赤い首輪、黒い鼻、やさしい表情を参考に、犬の5ポーズを描き直しました。ロゴ・オープニング・フッターも同じ犬に統一。faviconの犬も白に変更しました。この時点の共有カードは `og-inko-cream-20260928.png` で、現在は10月15日の改訂版に差し替えています。素材と実行プロンプトは `ASSET-CREAM-PROMPTS.md` に記録しています。提供写真そのものはWebサイトに掲載していません。
 
 参考にしたのは https://yusannouekiya.com/ の余白を通る鳥と植物、https://sustainable.botanistofficial.com/ の重なり合う景色と背景の変化です。画像やソースコードは転用していません。
 
@@ -118,6 +122,6 @@ FVはスクロールすると画面中央へカメラが進むように拡大し
 - `script.js`：メニュー、登場演出、連絡先・ギャラリー設定
 - `site-config.js`：あとから追加する連絡先と掲載作品
 - `assets/`：水彩イラスト（built-in imagegenで生成）
-- `og-inko-cream-20260928.png`：OGP / LINE / SNSカード
+- `og-inko-cream-20261015.png`：OGP / LINE / SNSカード
 - `favicon.svg`：32pxでも識別しやすいインコと犬
 - `ASSET-PROMPTS.md`：イラストの生成プロンプト

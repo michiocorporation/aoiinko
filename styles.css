@@ -98,7 +98,7 @@ body:not(.js-ready) .flow-button { cursor: default; }
 .art-student { background-image: url('./assets/student-stage-20261015.webp'); background-size: contain; background-position: center; }
 .art-writing { background-position: 25% center; }
 .art-teaching { background-position: 50% center; }
-.art-video { background-position: 75% center; }
+.art-video { background-image: url('./assets/camera-dslr-20261015.webp'); background-size: contain; background-position: center; }
 .art-haiku { background-position: 100% center; }
 .flow-title { font: 500 20px/1.6 var(--title); white-space: nowrap; }
 .flow-caption { margin-top: 8px; font-size: 14px; line-height: 1.8; color: var(--muted); }
